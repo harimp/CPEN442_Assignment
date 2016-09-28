@@ -119,7 +119,7 @@ if __name__ == '__main__':
 
 	# find best simplified temperature
 	cipherLength = len(ciphertext)
-	temperature = 10 + 0.087 * (cipherLength - 84)
+	temperature = 10 + 0.087 * (cipherLength - 84) / 50
 
 	# Prepare swapping preset values
 	swapping = []
@@ -128,7 +128,8 @@ if __name__ == '__main__':
 	swapping.append([4, 3, 2, 1, 0, 9, 8, 7, 6, 5, 14, 13, 12, 11, 10, 19, 18, 17, 16, 15, 24, 23, 22, 21, 20])
 
 	# Make random key
-	parentKey = randomKey()
+	# parentKey = randomKey()
+	parentKey = "GCBTDOEMIFXAUKLNZPHQRVWSY"
 	parentScore = analyzeScore(parentKey, ciphertext, quadgram)
 
 	i = 0
